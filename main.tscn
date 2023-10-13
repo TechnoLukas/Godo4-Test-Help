@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxo2vo7uailuv"]
+[gd_scene load_steps=5 format=3 uid="uid://cxo2vo7uailuv"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_vpltj"]
 
 [sub_resource type="Environment" id="Environment_3ae0e"]
 
@@ -10,7 +12,9 @@ transparency = 1
 blend_mode = 3
 albedo_color = Color(1, 1, 1, 0)
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("ground")]
+script = ExtResource("1_vpltj")
+ground = NodePath("CSGBox3D")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.360827, 0.932633, 0, -0.932633, -0.360827, 0, 6, 0)
@@ -20,14 +24,17 @@ shadow_enabled = true
 environment = SubResource("Environment_3ae0e")
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
-size = Vector3(10, 0.5, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.55246)
+size = Vector3(10, 0.5, 20)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2.82677)
 material = SubResource("StandardMaterial3D_3dtfv")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-size = Vector3(12, 0.5, 12)
+transform = Transform3D(0.83552, 0, -0.54946, 0, 1, 0, 0.54946, 0, 0.83552, -1.33175, 0.0965548, 3.52752)
+size = Vector3(12, 0.5, 11.6353)
 material = SubResource("StandardMaterial3D_gjd3i")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.812393, 0.371704, -0.449282, 0.0610828, 0.712005, 0.699512, 0.579903, -0.595722, 0.555723, -1.51592, 4.65333, -0.628159)
