@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4ccywf4en507"]
+[gd_scene load_steps=4 format=3 uid="uid://c5mypcl0qaj88"]
 
 [ext_resource type="Script" path="res://composite_scene.gd" id="1_c34qe"]
 [ext_resource type="PackedScene" uid="uid://cxo2vo7uailuv" path="res://main.tscn" id="1_ixs4j"]
@@ -31,7 +31,6 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 own_world_3d = true
-transparent_bg = true
 handle_input_locally = false
 size = Vector2i(1152, 648)
 render_target_update_mode = 4
