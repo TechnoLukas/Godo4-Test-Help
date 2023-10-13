@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxo2vo7uailuv"]
+
+[sub_resource type="Environment" id="Environment_3ae0e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3dtfv"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjd3i"]
+transparency = 1
+blend_mode = 3
+albedo_color = Color(1, 1, 1, 0)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.360827, 0.932633, 0, -0.932633, -0.360827, 0, 6, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3ae0e")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+size = Vector3(10, 0.5, 10)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+material = SubResource("StandardMaterial3D_3dtfv")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+size = Vector3(12, 0.5, 12)
+material = SubResource("StandardMaterial3D_gjd3i")
