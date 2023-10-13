@@ -11,10 +11,10 @@ config_version=5
 [application]
 
 config/name="Tester-Helper"
-run/main_scene="res://main.tscn"
+run/main_scene="res://composite_scene.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
+[dotnet]
 
-Gamestate="*res://gamestate.gd"
+project/assembly_name="Tester-Helper"
